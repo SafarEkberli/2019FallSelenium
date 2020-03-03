@@ -20,8 +20,25 @@ public class BasicNavigation {
         }else {
             System.out.println("Test Failed!");
         }
+
+        driver.navigate().to("http://amazon.com");
+        if (driver.getTitle().toLowerCase().contains("amazon")){
+            System.out.println("Test Passed!");
+        }else {
+            System.out.println("Test Failed!");
+        }
+        driver.navigate().back();
+        verifyEquals(driver.getTitle(),"Google");
+
         driver.close();
 
 
+    }
+    public static void verifyEquals(String arg1, String arg2){
+        if(arg1.equals(arg2)){
+            System.out.println("Test Passed!");
+        }else {
+            System.out.println("Test Failed!");
+        }
     }
 }
