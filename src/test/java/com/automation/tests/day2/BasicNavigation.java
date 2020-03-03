@@ -25,7 +25,7 @@ public class BasicNavigation {
         if (driver.getTitle().toLowerCase().contains("amazon")){
             System.out.println("Test Passed!");
         }else {
-            System.out.println("Test Failed!");
+            System.out.println("Test Failed!!!");
         }
         driver.navigate().back();
         verifyEquals(driver.getTitle(),"Google");
@@ -39,6 +39,7 @@ public class BasicNavigation {
             System.out.println("Test Passed!");
         }else {
             System.out.println("Test Failed!");
+
         }
     }
 }
